@@ -61,6 +61,8 @@ vector<int> spiralOrder(const vector<vector<int>> &A) {
 
 int main()
 {
-    vector<int> V;
-    
+    const vector<vector <int>> V = {{1,2,3,4},{5,6,7,8},{9, 10, 11, 12}};
+    vector<int> result = spiralOrder (V);
+    for (int j = 0; j<result.size(); j++)
+        printf("%d", result[j]);
 }
