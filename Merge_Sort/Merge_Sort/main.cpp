@@ -42,26 +42,26 @@ vector<int> merge (vector<int> L, vector<int> R, vector<int> A)
     return A;
 }
 
-//////Dividing and Sorting////////////////
+//////    Dividing and Sorting  ///////////////
 
 vector<int> mergeSort(vector<int> A){
     unsigned long n = A.size();
-    if(n<2)
+    if(n < 2)
         return A;
     unsigned long mid = n/2;
-    vector<int> left (mid, 0);
-    vector<int> right (n - mid, 0);
+    vector<int> left(mid, 0);
+    vector<int> right(n - mid, 0);
     unsigned long i;
     for (i = 0; i < mid; i++)
         left [i] = A[i];
     for (i = mid; i<n; i++)
         right [i - mid] = A[i];
-    mergeSort(left);
-    mergeSort(right);
+    left = mergeSort(left);
+    right = mergeSort(right);
     return merge (left, right, A);
 }
 int main() {
-    vector<int> A = {2, 7, 3 , 4 , 1 , 5, 6, 10, 43 , 9, 11, 10, 50};
+    vector<int> A = {2, 7, 3 , 4 , 1 , 5, 90, 89, 5, 100, 9, 56};
     
     vector<int> result = mergeSort(A);
     for  ( int i = 0; i < result.size(); i++)
