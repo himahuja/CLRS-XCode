@@ -23,7 +23,7 @@ vector<int> binaryAddition(vector<int> a, vector<int>b)
         else
             result.push_back(0);
         
-        if(a[i]+b[i]+c >= 2)
+        if( (a[i] && b[i]) || (c && b[i]) || (a[i] && c) )
             c = 1;
         else
             c = 0;
