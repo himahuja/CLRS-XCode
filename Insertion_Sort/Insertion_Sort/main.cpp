@@ -18,7 +18,7 @@ vector<int> insertionSort (vector<int> A, unsigned long n)
     {
         value = A[i];
         hole = i;
-        while ( hole>0 && value < A[hole - 1])
+        while ( hole>0 && value > A[hole - 1])
         {
             A[hole] = A[hole - 1];
             hole = hole - 1;
