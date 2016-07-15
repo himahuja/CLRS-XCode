@@ -9,6 +9,7 @@
 #include <iostream>
 #include <limits>
 #include <vector>
+#include <time.h>
 
 using namespace :: std;
 
@@ -52,11 +53,13 @@ int findMaxSubArray (vector<int> &A, unsigned long low, unsigned long high){
 
 
 int main() {
+    clock_t start = clock();
     vector <int> A ={13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
-    vector <int> B = {6,-8,10, -3, -6, 5, 4, 3};
-    unsigned long n = A.size();
-    int maxSum = findMaxSubArray(A, 0 , n - 1);
+    int maxSum = findMaxSubArray(A, 0 , A.size() - 1);
     cout<<"Maximum sum is: "<<maxSum;
+    clock_t stop = clock();
+    double elapsed = (double)(stop - start) * 1000.0 / CLOCKS_PER_SEC;
+    printf("\nTime elapsed in ms: %f \n", elapsed);
     return 0;
     
 }
