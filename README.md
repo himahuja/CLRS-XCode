@@ -1,2 +1,2 @@
-# Tennenbaum-XCode
-Tennenbaum Practice Problems (II Edition)
+# CLRS-XCode
+CLRS Practice Problems (III Edition)
